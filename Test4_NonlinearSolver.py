@@ -4,13 +4,12 @@ L2, L3, a2, b, x_s, z_s, Lq3o = symbols('L2, L3, a2, b, x_s, z_s, Lq3o')
 
 L2 = 1280
 L3 = 1420
-Lq3o = 40.491
 
 P = Matrix([[x_s], [z_s]])
 P1 = Matrix([[L2*cos(a2)],
                  [L2*sin(a2)]])
-P2 = P1 + Matrix([[L3*cos(b) - Lq3o*sin(b)],
-                 [L3*sin(b) + Lq3o*cos(b)]])
+P2 = P1 + Matrix([[L3*cos(b)],
+                  [L3*sin(b)]])
 
 V1 = (P2-P1)
 V2 = (P-P2)

@@ -10,13 +10,12 @@ L3  = 5
 # b   = np.deg2rad(27)
 x_s = 13.6
 z_s = 2
-Lq3o = 40.491
 
 P  = sym.Matrix([[x_s], [z_s]])
 P1 = sym.Matrix([[L2*sym.cos(a2)],
                  [L2*sym.sin(a2)]])
-P2 = P1 + sym.Matrix([[L3*sym.cos(b) - Lq3o*sym.sin(b)],
-                      [L3*sym.sin(b) + Lq3o*sym.cos(b)]])
+P2 = P1 + sym.Matrix([[L3*sym.cos(b)],
+                      [L3*sym.sin(b)]])
 
 V1 = (P2-P1)
 V2 = (P-P2)
